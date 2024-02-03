@@ -1,6 +1,7 @@
 import face_recognition
 
 # Get user input for the known image filename
+known_filename = input("Enter the filename of the known image (e.g., donald_trump.jpeg): ")
 known_image_path = f"images/donald_trump.jpeg"
 known_image = face_recognition.load_image_file(known_image_path)
 known_encoding = face_recognition.face_encodings(known_image)[0]
