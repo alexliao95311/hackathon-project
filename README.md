@@ -1,4 +1,4 @@
-# Hackahton Project 
+# Hackathon Project 
 
 Ideas
 - Image generator based on text, add web dev?
