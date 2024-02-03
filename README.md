@@ -1,9 +1,6 @@
 # Hackathon Project 
 
-Ideas
-- Image generator based on text, add web dev?
-- teacher rater website
-- code reviewer - input code and you review it
-- mental health chatbot
-
-confirmed idea - face recognition
+Discord AI Bot:
+- Image Generation
+- Text Generation
+- Chatbot
