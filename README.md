@@ -5,3 +5,5 @@ Ideas
 - teacher rater website
 - code reviewer - input code and you review it
 - mental health chatbot
+
+confirmed idea - face recognition
