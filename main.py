@@ -767,19 +767,5 @@ async def shoot(ctx, member: discord.Member = None):
 @client.command()
 async def ping(ctx):
     await ctx.send(f"Pong! {round(client.latency*1000)}ms")
-    
-"""
-#Image Generator Command
-@client.command()
-async def image(ctx, *, image = None):
-    if image == None:
-        await ctx.send('What image do you want to generate?')
-    else:
-        embed = discord.Embed(title='Image Generated!', description='Generated the image '+image+'!', color=random.choice(colors))
-        await ctx.send(embed=embed)
-"""   
-
-
-# Chat Command
         
-client.run("MTA3MTU4OTc0OTI4Mzg4OTIyMw.GqCUEa.5WzLzCmbOQTFJ3dtzGVIGKUKZRJUgYbt0pKkP4")
+client.run(token) # put real token here
