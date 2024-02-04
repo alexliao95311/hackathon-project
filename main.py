@@ -774,4 +774,4 @@ async def image(ctx, *, image = None):
         await ctx.send(embed=embed)
 """   
         
-client.run("MTA3MTU4OTc0OTI4Mzg4OTIyMw.GHA-j5.LX4iIntxyK4OA44wBLEVqGBAQeFJv5x9rbrJDU")
+client.run(token)
