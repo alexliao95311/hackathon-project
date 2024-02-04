@@ -109,7 +109,7 @@ HELP COMMAND
 #Main
 main = discord.Embed(
     title='VECTOR HELP',
-    description='Type `-help <category>` for a specific category\n\n**Categories:** \nUtility\nModeration\nFun',
+    description='Type `-help <category>` for a specific category\n\n**Categories:** \nUtility\nModeration\nFun\nAI',
     color = random.choice(colors)
 )
 main.add_field(name = 'Navigation Help',
@@ -120,23 +120,26 @@ main.add_field(name='Command Format',
 main.set_footer(text='Home Page')
 
 page1 = discord.Embed(title='Utility Commands',description='> `-help (category)`\n> shows this page\n\n> `-send <message>`\n> sends whatever message you want\n\n> `-serverinfo`\n> gets a server\'s information\n\n> `-remind <time> <todo>`\n> sets a reminder\n\n> `-whois (user)`\n> shows a member\'s info\n\n> `-createchannel <channel name>`\n> creates a new text channel\n\n> `-deletechannel <channel name>`\n> deletes a text channel\n\n> `-lock <channel> (reason)`\n> locks a channel\n\n> `-unlock <channel>`\n> unlocks a channel\n\n> `-lockdown`\n> locks all channels in the server\n\n> `-unlockdown`\n> unlocks all channels in the server', color=0x32CD32)
-page1.set_footer(text='Help Page 1/3')
+page1.set_footer(text='Help Page 1/4')
 page2 = discord.Embed(title='Moderation Commands',
            description='> `-kick <user> (reason)`\n> kicks a user\n\n> `-ban <user> (reason)`\n> bans a user\n\n> `-warn <user> <reason>`\n> warns a user\n\n> `-mute <user> (reason)`\n> mutes a person\n\n> `-unmute <user>`\n> unmutes a user\n\n> `-tempmute <user> <mins> <reason>`\n> tempmutes a user for an amount of MINUTES\n\n> `-slowmode <seconds>`\n> sets a slowmode for the current channel\n\n> `-nuke <channel>`\n> nukes a channel\n\n> `-purge <amount>`\n> purges an amount of messages',
             color=0xFF8C00)
-page2.set_footer(text='Help Page 2/3')
+page2.set_footer(text='Help Page 2/4')
 page3 = discord.Embed(title='Fun Commands', 
             description='> `-guilds`\n> shows how many servers the bot is in\n\n> `-rps <choice>`\n> rock paper scissors\n\n> `-pfp (user)`\n> gets a pfp of a user\n\n> `-hack <user>`\n> hacks a person :smiling_imp:\n\n> `-search <word/thing>`\n> searches wikipedia for something\n\n> `-8ball <question>`\n> ask the 8ball a question\n\n> `-shoot <user>`\n> "shoots" another person\n\n> `-ping`\n> gets the bot\'s latency\n\n> `-snipe`\n> gets recently deleted messages',
             color=0x9B26B6)
- 
-page3.set_footer(text='Help Page 3/3')
+page3.set_footer(text='Help Page 3/4')
+page4 = discord.Embed(title='AI Commands',
+            description="> `-chat <message>`\n> chat with the bot\n\n> `-generate <image_description>`\n> generates an image",
+            color=0x1E90FF)
+page4.set_footer(text='Help Page 4/4')
 
 
 
 @client.command(aliases=['h'])
 async def help(ctx, *, category = None):
     if category == None:
-        pages = [main, page1, page2, page3]
+        pages = [main, page1, page2, page3, page4]
         current = 0
         msg = await ctx.send(embed=pages[current])
         buttons = [u"\u23EA", u"\u2B05", u"\u27A1", u"\u23E9"]
@@ -173,6 +176,8 @@ async def help(ctx, *, category = None):
         await ctx.send(embed=page2)
     elif 'fun' in category.lower():
         await ctx.send(embed=page3)
+    elif 'ai' in category.lower():
+        await ctx.send(embed=page4)
     else:
         await ctx.send('That\'s not a category! Type `-help` for all help pages!')
               
@@ -773,5 +778,8 @@ async def image(ctx, *, image = None):
         embed = discord.Embed(title='Image Generated!', description='Generated the image '+image+'!', color=random.choice(colors))
         await ctx.send(embed=embed)
 """   
+
+
+# Chat Command
         
-client.run(token)
+client.run("MTA3MTU4OTc0OTI4Mzg4OTIyMw.GqCUEa.5WzLzCmbOQTFJ3dtzGVIGKUKZRJUgYbt0pKkP4")
